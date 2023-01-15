@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const Table = styled.table`
+margin-top: 30px;
 border: 1px solid lightgray;
-width: 800px;
+width: 600px;
 `
 export const HeadRow = styled.tr`
-background-color:skyblue;
+color: white;
+background-color:darkcyan;
+height: 3rem;
 `

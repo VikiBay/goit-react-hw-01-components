@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-import {TablelRow} from './Transaction.styled'
+import {TablelRow, TypeColumn} from './Transaction.styled'
 
 export const Transaction = ({data:{id, type, amount, currency}})=>{
     return <TablelRow>
-    <td>{type}</td>
+    {/* <TypeColumn>{type}</TypeColumn> */}
+    <TypeColumn>{type[0].toUpperCase()+type.slice(1)}</TypeColumn>
     <td>{amount}</td>
     <td>{currency}</td>
   </TablelRow>

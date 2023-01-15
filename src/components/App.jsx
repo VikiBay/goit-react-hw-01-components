@@ -34,8 +34,7 @@ import transactions from '../transactions.json'
 
 export const App = ()=>{
   return <>
-  <TestProfileList content={testusers}/>
-
+  {/* <TestProfileList content={testusers}/> */}
   <Profile
   username={user.username}
   tag={user.tag}
