@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const Wrapper = styled.div`
-margin-top: 30px;
+margin: 30px auto 0 auto;
 width:400px;
 border: 1px solid lightgray;
 
@@ -26,14 +26,15 @@ margin: 0 auto;
 export const Name = styled.p`
 font-weight: bold;
 `
+export const Info = styled.p`
+color: grey;
+`
 export const Stats = styled.ul`
+background-color: aliceblue;
 display: flex;
-justify-content: space-between;
 list-style: none;
-
 padding: 0;
 margin: 0;
-
 `
 export const StatCard = styled.li`
 width: 100%;
@@ -41,17 +42,18 @@ border: 1px solid lightgray;
 display: flex;
 flex-direction: column;
 text-align:center;
+padding: 20px;
+
 `
 
-export const Info = styled.p`
-color: grey;
-`
 export const Label = styled.p`
 color: grey;
 font-size: 15px;
+margin: 0;
 `
 
 export const Quantity = styled.p`
 font-weight: bold;
+margin: 5px 0 0;
 `
 
