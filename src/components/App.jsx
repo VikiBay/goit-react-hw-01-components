@@ -16,8 +16,8 @@
 // };
 
 
-import { TestProfileList } from "./TestProfileList/TestProfileList"
-import testusers from '../testusers.json'
+// import { TestProfileList } from "./TestProfileList/TestProfileList"
+// import testusers from '../testusers.json'
 
 import { Profile } from "../components/Profile/Profile"
 import user from '../user.json'

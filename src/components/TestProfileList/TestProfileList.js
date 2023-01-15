@@ -1,6 +1,6 @@
-import { TestProfile } from "../TestProfile/TestProfile";
+// import { TestProfile } from "../TestProfile/TestProfile";
 import PropTypes from "prop-types";
-import {TestList} from './TestProfileList.styled'
+// import {TestList} from './TestProfileList.styled'
 
 export const TestProfileList = ({content})=>{
     return (
