@@ -1,46 +1,42 @@
 import PropTypes from "prop-types";
+import {Wrapper, Description, Avatar, Name, Info, Stats, StatCard, Label, Quantity} from './Profile.styled'
 
-
-// export const Profile = ({content:{username, avatar,stats:{followers,views,likes}}})=>{
     export const Profile = ({username, tag, location, avatar,stats:{followers,views,likes}})=>{
-    return <div className="profile">
-  <div className="description">
-    <img
+    return <Wrapper>
+  <Description>
+    <Avatar
       src={avatar}
       alt={username}
       className="avatar"
     />
-    <p className="name">{username}</p>
-    <p className="tag">@{tag}</p>
-    <p className="location">{location}</p>
-  </div>
+    <Name>{username}</Name>
+    <Info>@{tag}</Info>
+    <Info>{location}</Info>
+  </Description>
 
-  <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{followers}</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">{views}</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{likes}</span>
-    </li>
-  </ul>
-</div>
+  <Stats>
+    <StatCard>
+      <Label>Followers</Label>
+      <Quantity>{followers}</Quantity>
+    </StatCard>
+    <StatCard>
+      <Label>Views</Label>
+      <Quantity>{views}</Quantity>
+    </StatCard>
+    <StatCard>
+      <Label>Likes</Label>
+      <Quantity>{likes}</Quantity>
+    </StatCard>
+  </Stats>
+</Wrapper>
 }
 
 Profile.propTypes = {
-    data:PropTypes.exact({
-        id:PropTypes.number.isRequired,
+    
         avatar:PropTypes.string,
         username:PropTypes.string.isRequired,
         location:PropTypes.string.isRequired,
         tag:PropTypes.string.isRequired,
-        stats:PropTypes.object.isRequired,
-        difficulty:PropTypes.oneOf(['Easy', 'Medium', 'Hard']).isRequired
-    })
-    
+        stats:PropTypes.object.isRequired
+  
 }

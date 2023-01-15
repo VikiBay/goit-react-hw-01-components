@@ -1,32 +1,28 @@
 // import PropTypes from "prop-types";
-import { StatisticsItem } from "./StatisticsItem";
+import { StatisticsItem } from "../StatisticsItem/StatisticsItem";
+import {Wrapper,StatList} from './Statistics.styled'
 
+import PropTypes from "prop-types";
 
-
-// export const Profile = ({content:{username, avatar,stats:{followers,views,likes}}})=>{
     export const Statistics = ({title, stats})=>{
         return (
-            <section className="statistics">
+<Wrapper>
   <h2 className="title">{title}</h2>
-  <ul style={{display: 'flex'}} className="stat-list">
+  <StatList>
 {stats.map(stat=>(
     <StatisticsItem key={stat.id} data={stat}/>
 ))}
-  </ul>
-</section> 
+  </StatList>
+</Wrapper> 
         );
     };
     
 
-// Statistics.propTypes = {
-//     data:PropTypes.exact({
-//         id:PropTypes.number.isRequired,
-//         avatar:PropTypes.string,
-//         username:PropTypes.string.isRequired,
-//         location:PropTypes.string.isRequired,
-//         tag:PropTypes.string.isRequired,
-//         stats:PropTypes.object.isRequired,
-//         difficulty:PropTypes.oneOf(['Easy', 'Medium', 'Hard']).isRequired
-//     })
-    
-// }
+    Statistics.propTypes = {
+        title: PropTypes.string,
+        stats: PropTypes.arrayOf(PropTypes.exact({
+            id:PropTypes.string.isRequired,
+            label:PropTypes.string.isRequired,
+            percentage:PropTypes.number.isRequired
+        }))
+        }
